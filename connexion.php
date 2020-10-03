@@ -56,15 +56,15 @@
                        if(mysqli_num_rows($resultat) > 0)
                        {
                            $message = '<div class="alerte" id="notification">
-              <strong>Opération réussie</strong> Utilisateur connecté<br>
-            </div>';
+                                       <strong>Opération réussie</strong> Utilisateur connecté<br>
+                                       </div>';
                            echo $message;
                        }
                        else
                        {
                            $message = '<div class="alerte" id="notification">
-              <strong>Opération échouée</strong> Utilisateur non-connecté<br>
-            </div>';
+                                       <strong>Opération échouée</strong> Utilisateur non-connecté<br>
+                                       </div>';
                            echo $message;
                        }
                 }
