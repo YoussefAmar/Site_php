@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b1dad9df-3a82-426a-b136-0cc0afaabd81" name="Default Changelist" comment="" />
+    <list default="true" id="b1dad9df-3a82-426a-b136-0cc0afaabd81" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,8 +13,12 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectId" id="1iHBJ8n5DxR8Z2ouGO0cdspYm9F" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -49,6 +56,7 @@
       <workItem from="1601568806761" duration="4783000" />
       <workItem from="1601619165320" duration="482000" />
       <workItem from="1601624850222" duration="722000" />
+      <workItem from="1601731277800" duration="1701000" />
     </task>
     <servers />
   </component>
@@ -56,10 +64,22 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="396" y="164" key="#Notifications" timestamp="1601731445671">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="396" y="164" key="#Notifications/0.0.1280.680@0.0.1280.680" timestamp="1601731445671" />
     <state x="349" y="0" key="#PHP" timestamp="1601554630244">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="349" y="0" key="#PHP/0.0.1280.680@0.0.1280.680" timestamp="1601554630244" />
+    <state x="520" y="238" key="Github.ShareDialog" timestamp="1601731371569">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="520" y="238" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1601731371569" />
+    <state x="498" y="45" key="Github.UntrackedFilesDialog" timestamp="1601731404285">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="498" y="45" key="Github.UntrackedFilesDialog/0.0.1280.680@0.0.1280.680" timestamp="1601731404285" />
     <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1601568707871">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -116,9 +136,17 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1601569195783" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1601731465202">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1601731465202" />
     <state x="0" y="0" key="com.jetbrains.php.config.phpInfo.PhpInfo.PhpInfoDialog" timestamp="1601564130227">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="0" y="0" key="com.jetbrains.php.config.phpInfo.PhpInfo.PhpInfoDialog/0.0.1280.680@0.0.1280.680" timestamp="1601564130227" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1601731309043">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1601731309043" />
   </component>
 </project>

@@ -22,7 +22,6 @@
                     <form method="post" action="<?php $_SERVER['PHP_SELF'];?>"> <!-- Remplacer par bdd  -->
                         <div class="form-group">
                             <label>Designation</label>
-
                             <label>
                                 <select class="form-control" name="Statut" required>
                                     <option name="Statut">Client</option>
@@ -123,28 +122,39 @@
         $insertion ="INSERT INTO utilisateur (Nom, Prenom, Email, Naissance, Gsm, Password, Statut, IdAutorisation)
         VALUE('$Nom','$Prenom','$Email','$Naissance','$Gsm','$Password','$Statut','$IdAutorisation')";
 
+        $req = "SELECT Email FROM utilisateur WHERE Email = '$Email'";
+        $resultat = mysqli_query($con,$req);
+
         if($Password == $ConfirmPassword)
         {
-            if(mysqli_query($con,$insertion))
+            if (mysqli_num_rows($resultat) > 0)
             {
-                $message = '<div class="alerte" id="notification">
-              <strong>Opération réussie</strong> Utilisateur enregistré<br>
-            </div>';
+              echo $message = '<div class="alerte" id="notification">
+                          <strong>Echec</strong> Email déjà utilisée<br>
+                        </div>';
             }
             else
-            {
-                $message = '
-          <div class="alerte" id="notification">
-            <strong>Echec</strong> Utilisateur non-enregistré <br>
-          </div>';
+                {
+                if (mysqli_query($con, $insertion))
+                {
+                   echo $message = '<div class="succes" id="notification">
+                                 <strong>Opération réussie</strong> Utilisateur enregistré<br>
+                                 </div>';
+                }
+                else
+                    {
+                  echo $message = '<div class="alerte" id="notification">
+                                <strong>Echec</strong> Utilisateur non-enregistré <br>
+                                </div>';
+                    }
             }
         }
-        else {
-            $message = '
-          <div class="alerte" id="notification">
-            <strong>Echec</strong> Les Passwords sont différents <br>
-          </div>';
-        }
+        else
+            {
+              echo $message = '<div class="alerte" id="notification">
+                               <strong>Echec</strong> Les mots de passes sont différents <br>
+                               </div>';
+            }
     }
     ?>
 
