@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!doctype html>
 <html lang="fr">
 <head>
@@ -19,7 +20,7 @@
             </div>
             <div class="Site_Final">
                 <h1>Connexion</h1>
-                <form method="post" action="<?php $_SERVER['PHP_SELF'];?>"> <!-- Remplacer par bdd  -->
+                <form method="post" action="<?php $_SERVER['PHP_SELF'];?>">
                     <div class="form-group">
                         <label>Email</label>
                         <label>
@@ -55,17 +56,21 @@
 
                        if(mysqli_num_rows($resultat) > 0)
                        {
-                           $message = '<div class="alerte" id="notification">
-                                       <strong>Opération réussie</strong> Utilisateur connecté<br>
-                                       </div>';
-                           echo $message;
+
+                           while($row = mysqli_fetch_assoc($resultat))
+                           {
+                               $_SESSION['IdUser'] = $row['IdUser'];
+                           }
+
+                           header('location:index.php');
+
+                           exit();
                        }
                        else
                        {
-                           $message = '<div class="alerte" id="notification">
-                                       <strong>Opération échouée</strong> Utilisateur non-connecté<br>
+                         echo $message = '<div class="alerte" id="notification">
+                                       <strong>Opération échouée</strong> Email ou mot de passe incorrect<br>
                                        </div>';
-                           echo $message;
                        }
                 }
 
@@ -80,7 +85,7 @@
 
                 <script type="text/javascript">
                     $(document).ready( function() {
-                        $('#notification').delay(5000).fadeOut();
+                        $('#notification').delay(3000).fadeOut();
                     });
                 </script>
 </body>

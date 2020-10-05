@@ -4,7 +4,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
@@ -19,7 +18,7 @@
                 </div>
                 <div class="Site_Final">
                     <h1>Formulaire d'inscription</h1>
-                    <form method="post" action="<?php $_SERVER['PHP_SELF'];?>"> <!-- Remplacer par bdd  -->
+                    <form method="post" action="<?php $_SERVER['PHP_SELF'];?>">
                         <div class="form-group">
                             <label>Designation</label>
                             <label>
@@ -122,7 +121,7 @@
         $insertion ="INSERT INTO utilisateur (Nom, Prenom, Email, Naissance, Gsm, Password, Statut, IdAutorisation)
         VALUE('$Nom','$Prenom','$Email','$Naissance','$Gsm','$Password','$Statut','$IdAutorisation')";
 
-        $req = "SELECT Email FROM utilisateur WHERE Email = '$Email'";
+        $req = "SELECT * FROM utilisateur WHERE Email = '$Email'";
         $resultat = mysqli_query($con,$req);
 
         if($Password == $ConfirmPassword)
@@ -137,9 +136,10 @@
                 {
                 if (mysqli_query($con, $insertion))
                 {
-                   echo $message = '<div class="succes" id="notification">
-                                 <strong>Opération réussie</strong> Utilisateur enregistré<br>
-                                 </div>';
+
+                    echo $message = '<div class="succes" id="notification">
+                                <strong>Succès</strong> Utilisateur enregistré <br>
+                                </div>';
                 }
                 else
                     {
@@ -157,7 +157,6 @@
             }
     }
     ?>
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -168,7 +167,7 @@
 
     <script type="text/javascript">
       $(document).ready( function() {
-        $('#notification').delay(5000).fadeOut();
+        $('#notification').delay(3000).fadeOut();
       });
     </script>
   </body>
