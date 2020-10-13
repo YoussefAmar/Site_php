@@ -60,11 +60,22 @@
                            while($row = mysqli_fetch_assoc($resultat))
                            {
                                $_SESSION['IdUser'] = $row['IdUser'];
+                               $_SESSION['Statut'] = $row['Statut'];
                            }
 
-                           header('location:index.php');
+                           switch($_SESSION['Statut'])
+                           {
 
-                           exit();
+                               case "Client" : header('location:User/Client.php'); exit();
+
+                               case "Travailleur" : header('location:User/Travailleur.php'); exit();
+
+                               case "Personnel" : header('location:User/Personnel.php'); exit();
+
+                               default : header('location : Error.php'); exit();
+
+                           }
+
                        }
                        else
                        {

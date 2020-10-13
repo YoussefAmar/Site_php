@@ -80,13 +80,14 @@
                         </div>
                         <button type="submit" class="btn btn-primary" name="Envoyer">Envoyer</button>
                     </form>
-                    <form action = connexion.php>
-                        <button type="submit" class="btn btn-primary" name="Connecter">Se connecter</button>
-                    </form>
                 </div>
             </div>
         </div>
     </div>
+
+    <form action = connexion.php>
+        <button type="submit" class="btn btn-primary" name="Connecter">Se connecter</button>
+    </form>
 
     <?php
 
@@ -107,19 +108,9 @@
         $Password = mysqli_real_escape_string($con,$_POST['Password']);
         $ConfirmPassword = mysqli_real_escape_string($con,$_POST['ConfirmPassword']);
         $Statut = mysqli_real_escape_string($con,$_POST['Statut']);
-        $IdAutorisation = 3;
 
-        switch ($Statut)
-        {
-            case "Client" : $IdAutorisation = 2; break;
-
-            case "Travailleur" : $IdAutorisation = 3; break;
-
-            case "Personnel" : $IdAutorisation = 1; break;
-        }
-
-        $insertion ="INSERT INTO utilisateur (Nom, Prenom, Email, Naissance, Gsm, Password, Statut, IdAutorisation)
-        VALUE('$Nom','$Prenom','$Email','$Naissance','$Gsm','$Password','$Statut','$IdAutorisation')";
+        $insertion ="INSERT INTO utilisateur (Nom, Prenom, Email, Naissance, Gsm, Password, Statut)
+        VALUE('$Nom','$Prenom','$Email','$Naissance','$Gsm','$Password','$Statut')";
 
         $req = "SELECT * FROM utilisateur WHERE Email = '$Email'";
         $resultat = mysqli_query($con,$req);
@@ -136,7 +127,6 @@
                 {
                 if (mysqli_query($con, $insertion))
                 {
-
                     echo $message = '<div class="succes" id="notification">
                                 <strong>Succès</strong> Utilisateur enregistré <br>
                                 </div>';

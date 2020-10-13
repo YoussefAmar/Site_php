@@ -19,10 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1dad9df-3a82-426a-b136-0cc0afaabd81" name="Default Changelist" comment="page de connexion et to do liste">
-      <change afterPath="$PROJECT_DIR$/Ecriture.html" afterDir="false" />
+    <list default="true" id="b1dad9df-3a82-426a-b136-0cc0afaabd81" name="Default Changelist" comment="Récupération des autorisations et html">
+      <change afterPath="$PROJECT_DIR$/Error.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/User/Personnel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/User/Travailleur.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ecriture.html" beforeDir="false" afterPath="$PROJECT_DIR$/User/Client.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/connexion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/inscription.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +64,12 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.reStructuredText" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="PHP Script.connexion.php">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\Site_Final\User" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.inscription.php">
     <configuration name="inscription.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Site_Final/inscription.php" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -98,7 +108,15 @@
       <workItem from="1601899739078" duration="122000" />
       <workItem from="1601900730140" duration="1038000" />
       <workItem from="1601901781512" duration="691000" />
-      <workItem from="1602051226222" duration="5208000" />
+      <workItem from="1602051226222" duration="5318000" />
+      <workItem from="1602056579135" duration="781000" />
+      <workItem from="1602071056279" duration="2488000" />
+      <workItem from="1602495216189" duration="24797000" />
+      <workItem from="1602528694052" duration="877000" />
+      <workItem from="1602530298236" duration="1593000" />
+      <workItem from="1602573284341" duration="1415000" />
+      <workItem from="1602577949778" duration="4677000" />
+      <workItem from="1602588992913" duration="2546000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout d'un cas où l'email existe déjà">
       <created>1601733500895</created>
@@ -121,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601900919131</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Récupération des autorisations et html">
+      <created>1602056527954</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1602056527954</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,7 +168,8 @@
     <MESSAGE value="Ajout d'un cas où l'email existe déjà" />
     <MESSAGE value="Nouvelle page de connexion" />
     <MESSAGE value="page de connexion et to do liste" />
-    <option name="LAST_COMMIT_MESSAGE" value="page de connexion et to do liste" />
+    <MESSAGE value="Récupération des autorisations et html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Récupération des autorisations et html" />
   </component>
   <component name="WindowStateProjectService">
     <state x="215" y="0" key="#CLI_Interpreters" timestamp="1602056434700">
@@ -162,6 +188,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="90" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1602056438163" />
+    <state x="371" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602507004819">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="371" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1602507004819" />
     <state x="557" y="93" key="#xdebugger.XInspectDialog" timestamp="1601745933501">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -178,66 +208,66 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="498" y="45" key="Github.UntrackedFilesDialog/0.0.1280.680@0.0.1280.680" timestamp="1601731404285" />
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1601902473045">
+    <state width="1237" height="204" key="GridCell.Tab.0.bottom" timestamp="1602529573489">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1601902473045" />
-    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1601902473045">
+    <state width="1237" height="204" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1602529573489" />
+    <state width="1237" height="204" key="GridCell.Tab.0.center" timestamp="1602529573481">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1601902473045" />
-    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1601902473045">
+    <state width="1237" height="204" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1602529573481" />
+    <state width="1237" height="204" key="GridCell.Tab.0.left" timestamp="1602529573481">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1601902473045" />
-    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1601902473045">
+    <state width="1237" height="204" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1602529573481" />
+    <state width="1237" height="204" key="GridCell.Tab.0.right" timestamp="1602529573489">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1601902473045" />
-    <state width="1237" height="204" key="GridCell.Tab.1.bottom" timestamp="1601901769124">
+    <state width="1237" height="204" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1602529573489" />
+    <state width="1237" height="204" key="GridCell.Tab.1.bottom" timestamp="1602529573489">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1601901769124" />
-    <state width="1237" height="204" key="GridCell.Tab.1.center" timestamp="1601901769124">
+    <state width="1237" height="204" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1602529573489" />
+    <state width="1237" height="204" key="GridCell.Tab.1.center" timestamp="1602529573489">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1601901769124" />
-    <state width="1237" height="204" key="GridCell.Tab.1.left" timestamp="1601901769123">
+    <state width="1237" height="204" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1602529573489" />
+    <state width="1237" height="204" key="GridCell.Tab.1.left" timestamp="1602529573489">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1601901769123" />
-    <state width="1237" height="204" key="GridCell.Tab.1.right" timestamp="1601901769124">
+    <state width="1237" height="204" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1602529573489" />
+    <state width="1237" height="204" key="GridCell.Tab.1.right" timestamp="1602529573489">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1601901769124" />
-    <state width="1237" height="204" key="GridCell.Tab.2.bottom" timestamp="1601756536050">
+    <state width="1237" height="204" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1602529573489" />
+    <state width="1237" height="204" key="GridCell.Tab.2.bottom" timestamp="1602529573489">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.2.bottom/0.0.1280.680@0.0.1280.680" timestamp="1601756536050" />
-    <state width="1237" height="204" key="GridCell.Tab.2.center" timestamp="1601756536050">
+    <state width="1237" height="204" key="GridCell.Tab.2.bottom/0.0.1280.680@0.0.1280.680" timestamp="1602529573489" />
+    <state width="1237" height="204" key="GridCell.Tab.2.center" timestamp="1602529573489">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.2.center/0.0.1280.680@0.0.1280.680" timestamp="1601756536050" />
-    <state width="1237" height="204" key="GridCell.Tab.2.left" timestamp="1601756536050">
+    <state width="1237" height="204" key="GridCell.Tab.2.center/0.0.1280.680@0.0.1280.680" timestamp="1602529573489" />
+    <state width="1237" height="204" key="GridCell.Tab.2.left" timestamp="1602529573489">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.2.left/0.0.1280.680@0.0.1280.680" timestamp="1601756536050" />
-    <state width="1237" height="204" key="GridCell.Tab.2.right" timestamp="1601756536050">
+    <state width="1237" height="204" key="GridCell.Tab.2.left/0.0.1280.680@0.0.1280.680" timestamp="1602529573489" />
+    <state width="1237" height="204" key="GridCell.Tab.2.right" timestamp="1602529573489">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.2.right/0.0.1280.680@0.0.1280.680" timestamp="1601756536050" />
-    <state x="477" y="264" key="NewPhpFileDialog" timestamp="1602053038611">
+    <state width="1237" height="204" key="GridCell.Tab.2.right/0.0.1280.680@0.0.1280.680" timestamp="1602529573489" />
+    <state x="477" y="264" key="NewPhpFileDialog" timestamp="1602574050552">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="477" y="264" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1602053038611" />
+    <state x="477" y="264" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1602574050552" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1602055697995">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1602055697995" />
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1601900924866">
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1602056541954">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1601900924866" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1602056541954" />
     <state x="194" y="69" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1601745662317">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
