@@ -1,13 +1,9 @@
 <?php
 session_start();
+include '../Views/Client.html';
+include '../Models/Bdd.php';
 
-$db_host = 'localhost';
-$db_username = 'root';
-$db_password = '';
-$db_name ='DbSW';
-
-$con = mysqli_connect($db_host,$db_username,$db_password,$db_name) or die('Erreur de connexion à la base de donnée');
-
+$con = $_SESSION['con'];
 $reqUser = "SELECT * FROM utilisateur WHERE IdUser = '{$_SESSION['IdUser']}'";
 $User = mysqli_query($con,$reqUser);
 
@@ -82,11 +78,11 @@ if(isset($_POST['Envoyer'])) {
 
     if ($add)
     {
+        header("Refresh:0");
+
         echo $message = '<div class="succes" id="notification">
                                 <strong>Succès</strong> Tâche envoyée <br>
                                 </div>';
-
-        header("Refresh:0");
     }
     else
         {
@@ -97,58 +93,3 @@ if(isset($_POST['Envoyer'])) {
 }
 
 ?>
-<!doctype html>
-<html lang="fr">
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-    <title>Client</title>
-
-</head>
-<body>
-<button onclick="myFunction()">+</button>
-
-<div class="container" id="Formulaire">
-    <div class="row">
-        <div class="col-md-6 offset-md-3">
-            <div class="col">
-            </div>
-            <div class="Site_Final">
-                <h1>To do</h1>
-                <form method="post" action="<?php $_SERVER['PHP_SELF'];?>">
-                    <div class="form-group">
-                        <label>Titre</label>
-                        <label>
-                            <input type="text" class="form-control" maxlength="30" name="Titre" placeholder="Titre de la requête" required>
-                        </label>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Contenu</label>
-                        <textarea class="form-control" rows="3" name="Contenu" placeholder="Contenu de la requête..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary" name="Envoyer">Envoyer</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-</body>
-
-<script>
-    function myFunction() {
-        var x = document.getElementById("Formulaire");
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
-        }
-    }
-</script>
-
-</html>
