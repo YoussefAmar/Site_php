@@ -39,9 +39,8 @@ include '../Models/Bdd.php';
                        else
                        {
                          echo $message = '<div class="alerte" id="notification">
-                                       <strong>Opération échouée</strong> Email ou mot de passe incorrect<br>
+                                       <strong>Opération échouée : </strong> Email ou mot de passe incorrect<br>
                                        </div>';
                        }
                 }
-
                 ?>

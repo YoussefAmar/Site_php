@@ -33,14 +33,14 @@ $con = $_SESSION['con'];
                 {
                 if (mysqli_query($con, $insertion))
                 {
-                    echo $message = '<div class="succes" id="notification">
-                                <strong>Succès</strong> Utilisateur enregistré <br>
+                    echo $message = '<div class="alerte" id="succes">
+                                <strong>Succès : </strong> Utilisateur enregistré <br>
                                 </div>';
                 }
                 else
                     {
                   echo $message = '<div class="alerte" id="notification">
-                                <strong>Echec</strong> Utilisateur non-enregistré <br>
+                                <strong>Echec : </strong> Utilisateur non-enregistré <br>
                                 </div>';
                     }
             }
@@ -48,7 +48,7 @@ $con = $_SESSION['con'];
         else
             {
               echo $message = '<div class="alerte" id="notification">
-                               <strong>Echec</strong> Les mots de passes sont différents <br>
+                               <strong>Echec : </strong> Les mots de passes sont différents <br>
                                </div>';
             }
     }
