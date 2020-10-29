@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css?family=Numans');
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700");
+
+html,body,footer{
+
+    background: linear-gradient(darkblue, darkred);
+    font-family: 'Numans', sans-serif;
+}
+
+textarea{
+    resize: none;
+}
+
+.container{
+    height: 100%;
+    align-content: center;
+}
+
+.card{
+    height: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 400px;
+    background-color: rgba(0,0,0,0.5) !important;
+}
+
+.social_icon span{
+    font-size: 60px;
+    margin-left: 10px;
+    color: #FFC312;
+}
+
+.social_icon span:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.card-header h3{
+    color: white;
+}
+
+.social_icon{
+    position: absolute;
+    right: 20px;
+    top: -45px;
+}
+
+.input-group-prepend span{
+    width: 50px;
+    background-color: #FFC312;
+    color: black;
+    border:0 !important;
+}
+
+input:focus{
+    box-shadow: 0 0 0 0 !important;
+
+}
+
+.login_btn{
+    color: black;
+    background-color: #FFC312;
+    width: auto;
+}
+
+.login_btn:hover{
+    color: black;
+    background-color: white;
+}
+
+.links{
+    color: white;
+}
+
+.links a{
+    margin-left: 4px;
+}
+
+#notification{
+    padding: 10px;
+    color: white;
+    box-sizing: content-box;
+    width: fit-content;
+    border: 1px solid #eee;
+    background: red;
+    opacity: 75%;
+    font-size: 20px;
+    margin: 0;
+    font-family: 'Numans', sans-serif;
+    position: relative;
+    bottom: 90px;
+}
+
+
+#succes{
+    padding: 10px;
+    color: white;
+    box-sizing: content-box;
+    border: 1px solid #eee;
+    background: green;
+    opacity: 75%;
+    font-size: 20px;
+    margin: 0;
+    font-family: 'Numans', sans-serif;
+    position: relative;
+    bottom: 90px;
+}
+
+#hide{
+
+    font-family: 'Numans', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.profile {
+    width: 400px;
+    border: none;
+    border-radius: 10px;
+    background-color: #fff
+}
+
+.stats {
+    background: #f2f5f8 !important;
+    color: #000 !important
+}
+
+.articles {
+    font-size: 10px;
+    color: #a1aab9
+}
+
+.number1 {
+    font-weight: 500
+}
+
+.number2 {
+    font-weight: 500
+}
+
+.rating {
+    font-size: 10px;
+    color: #a1aab9
+}
+
+.number3 {
+    font-weight: 500
+}
+
+.containertodo {
+    width: 80%;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centertodo {
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.cardtodo {
+    background: #030303;
+    color: white;
+    width: 250px;
+    word-break: keep-all;
+    word-wrap: break-word;
+    min-height: 404.5px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    padding: 20px;
+    margin: 5px;
+    box-shadow: -10px -10px 0px 0px #FFC312;
+    border-radius: 10px;
+    -webkit-animation-name: shadow-show;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1.5s;
+    /* Safari 4.0 - 8.0 */
+    animation-name: shadow-show;
+    animation-duration: 1.5s;
+    -webkit-transition-timing-function: cubic-bezier(0.795, 0, 0.165, 1);
+    transition-timing-function: cubic-bezier(0.795, 0, 0.165, 1);
+    /* custom */
+}
+.cardtodo h1, .cardtodo h2, .cardtodo h3, .cardtodo h4, .cardtodo h5 {
+    margin: 0px;
+    color: white;
+    word-break: keep-all;
+    word-wrap: break-word;
+    padding: 0px 0px 15px 0px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 30px;
+}
+.cardtodo hr {
+    display: block;
+    color: white;
+    border: none;
+    height: 3px;
+    word-break: keep-all;
+    word-wrap: break-word;
+    background-color: #FFC312;
+    margin: 0px;
+    -webkit-animation-name: line-show;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 0.3s;
+    /* Safari 4.0 - 8.0 */
+    animation-name: line-show;
+    animation-duration: 0.3s;
+    -webkit-transition-timing-function: cubic-bezier(0.795, 0, 0.165, 1);
+    transition-timing-function: cubic-bezier(0.795, 0, 0.165, 1);
+    /* custom */
+}
+.cardtodo p {
+    margin: 15px 0px 0px 0px;
+    color: white;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 100;
+    letter-spacing: -0.25px;
+    line-height: 1.25;
+    font-size: 18px;
+    word-break: keep-all;
+    word-wrap: break-word;
+    -webkit-animation-name: p-show;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1.5s;
+    /* Safari 4.0 - 8.0 */
+    animation-name: p-show;
+    animation-duration: 1.5s;
+}
+
+li{
+    list-style:none;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#work_btn{
+
+    position: absolute;
+
+    max-height: 40px;
+
+}
+
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:600&display=swap");
+
+input[type="checkbox"] {
+    position: relative;
+    float: right;
+    width: 1.5em;
+    height: 1.5em;
+    color: #363839;
+    border: 1px solid #bdc1c6;
+    border-radius: 4px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+    cursor: pointer;
+    -webkit-transition: background 175ms cubic-bezier(0.1, 0.1, 0.25, 1);
+    transition: background 175ms cubic-bezier(0.1, 0.1, 0.25, 1);
+}
+input[type="checkbox"]::before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 2px;
+    left: 7px;
+    width: 8px;
+    height: 14px;
+    border-style: solid;
+    border-color: #fff;
+    color: grey;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    opacity: 0;
+}
+input[type="checkbox"]:checked {
+    color: #fff;
+    border-color: #363839;
+    background: #FFC312;
+}
+input[type="checkbox"]:checked::before {
+    opacity: 1;
+}
+input[type="checkbox"]:checked ~ #check::before {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+#check {
+    position: relative;
+    cursor: pointer;
+}
+#check::before {
+    position: absolute;
+    content: attr(data-content);
+    color: #9c9e9f;
+    -webkit-clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+    clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+    text-decoration: line-through;
+    text-decoration-thickness: 3px;
+    -webkit-text-decoration-color: #363839;
+    text-decoration-color: #363839;
+    -webkit-transition: -webkit-clip-path 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: -webkit-clip-path 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: clip-path 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: clip-path 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-clip-path 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+input[type='checkbox'] + #check {
+    display: block;
+    width: 10px;
+}
+
+#headcolor{
+
+    color: black;
+
+}
+
+#headwhite{
+
+    color: white;
+
+}
+
+#sup_btn{
+
+    position: absolute;
+
+    max-height: 40px;
+
+    margin: 0px 275px 0px 0px;
+
+
+}
+
+#ref_btn{
+
+    position: absolute;
+
+    max-height: 40px;
+
+    margin-top: 20px;
+}
