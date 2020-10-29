@@ -78,9 +78,20 @@ if(mysqli_num_rows($Tache) > 0)
     ".$row['Contenu']."
     </p>
     <p><div class='d-flex flex-column'>Envoyé le $Date_envoi</div></p>
-    <p><div class='d-flex flex-column'>Etat : $Fait</div></p>
-    <div class='d-flex flex-column'><label id='check' for='checkbox_".$row['IdTache']."' for='todo'>Valider : 
+    <p><div class='d-flex flex-column'>Etat : $Fait</div></p>";
+
+        if($row['Finis'] == 0)
+        {
+    echo "<div class='d-flex flex-column'><label id='check' for='checkbox_".$row['IdTache']."' for='todo'>Valider : 
         <input id='todo' value='todo' type='checkbox' name='checkbox_".$row['IdTache']."'></label></div>";
+
+        }
+
+        else if($row['Finis'] == 1)
+        {
+            echo "<p><div class='d-flex flex-column'>Fait par ".$row['Email_Finis']."</div></p>";
+        }
+
 
         while ($row = mysqli_fetch_assoc($MailClient))
         {
@@ -117,7 +128,7 @@ if(isset($_POST["Effectuer"]))
 
     foreach ($IdTaches as $IdTache)
     {
-        $updateTache = "UPDATE tache SET Finis = 1  WHERE IdTache = '$IdTache'";
+        $updateTache = "UPDATE tache SET Finis = 1, Email_Finis ='$Mail'  WHERE IdTache = '$IdTache'";
 
         if (mysqli_query($con, $updateTache))
         {

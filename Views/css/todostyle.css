@@ -96,6 +96,7 @@ input:focus{
     padding: 10px;
     color: white;
     box-sizing: content-box;
+    width: fit-content;
     border: 1px solid #eee;
     background: green;
     opacity: 75%;
@@ -178,6 +179,7 @@ input:focus{
     flex-direction: column;
     padding: 20px;
     margin: 5px;
+    margin-top: 100px;
     box-shadow: -10px -10px 0px 0px #FFC312;
     border-radius: 10px;
     -webkit-animation-name: shadow-show;
@@ -355,5 +357,12 @@ input[type='checkbox'] + #check {
 
     max-height: 40px;
 
-    margin-top: 20px;
+    margin-top: 25px;
+}
+
+#send_btn{
+
+    margin-top: 25px;
+    margin-left: 260px;
+
 }

@@ -81,6 +81,11 @@ if(mysqli_num_rows($Tache) > 0)
     <p><div class='d-flex flex-column'>Envoyé le $Date_envoi</div></p>
     <p><div class='d-flex flex-column'>Etat : $Fait</div>";
 
+        if($row['Finis'] == 1)
+        {
+            echo "<p><div class='d-flex flex-column'>Fait par ".$row['Email_Finis']."</div></p>";
+        }
+
         while ($row = mysqli_fetch_assoc($MailClient))
         {
             echo "<p><div class='d-flex flex-column'>Demandée par ".$row['Email']."</div></p></div></div></li></div>";
