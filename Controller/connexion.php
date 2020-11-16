@@ -13,7 +13,7 @@ include '../Models/Bdd.php';
                     $req = "SELECT * FROM utilisateur WHERE Email = '$Email' AND Password ='$Password'";
                     $resultat = mysqli_query($con,$req);
 
-                       if(mysqli_num_rows($resultat) > 0)
+                       if(mysqli_num_rows($resultat) > 0 && !isset($_SESSION['IdUser']))
                        {
 
                            while($row = mysqli_fetch_assoc($resultat))
@@ -36,11 +36,22 @@ include '../Models/Bdd.php';
                            }
 
                        }
+
                        else
                        {
-                         echo $message = '<div class="alerte" id="notification">
+                           if(isset($_SESSION['IdUser']))
+                           {
+                               echo $message = '<div class="alerte" id="notification">
+                                       <strong>Opération échouée : </strong> Utilisateur déjà connecté<br>
+                                       </div>';
+                           }
+
+                           else
+                           {
+                               echo $message = '<div class="alerte" id="notification">
                                        <strong>Opération échouée : </strong> Email ou mot de passe incorrect<br>
                                        </div>';
+                           }
                        }
                 }
                 ?>
