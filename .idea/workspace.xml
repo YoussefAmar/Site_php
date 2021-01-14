@@ -19,11 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1dad9df-3a82-426a-b136-0cc0afaabd81" name="Default Changelist" comment="Finalisation du projet">
+    <list default="true" id="b1dad9df-3a82-426a-b136-0cc0afaabd81" name="Default Changelist" comment="Ajout de la vérification du log in pour deux même users">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controller/connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/connexion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/connexion.html" beforeDir="false" afterPath="$PROJECT_DIR$/Views/connexion.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/inscription.html" beforeDir="false" afterPath="$PROJECT_DIR$/Views/inscription.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +130,11 @@
       <workItem from="1605534100410" duration="72000" />
       <workItem from="1605534183594" duration="105000" />
       <workItem from="1605534337026" duration="352000" />
-      <workItem from="1605540109708" duration="629000" />
+      <workItem from="1605540109708" duration="678000" />
+      <workItem from="1609411784058" duration="39000" />
+      <workItem from="1609419136106" duration="995000" />
+      <workItem from="1609420484544" duration="5000" />
+      <workItem from="1610564423789" duration="5935000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout d'un cas où l'email existe déjà">
       <created>1601733500895</created>
@@ -204,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603933566797</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Ajout de la vérification du log in pour deux même users">
+      <created>1605540783510</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1605540783510</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,7 +241,8 @@
     <MESSAGE value="css du login/inscriptions" />
     <MESSAGE value="Css finis" />
     <MESSAGE value="Finalisation du projet" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finalisation du projet" />
+    <MESSAGE value="Ajout de la vérification du log in pour deux même users" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout de la vérification du log in pour deux même users" />
   </component>
   <component name="WindowStateProjectService">
     <state x="215" y="0" key="#CLI_Interpreters" timestamp="1605534468380">

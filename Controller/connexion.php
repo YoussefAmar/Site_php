@@ -3,7 +3,7 @@
 include '../Views/connexion.html';
 include '../Models/Bdd.php';
 
-                $con = $_SESSION['con'];
+$con = $_SESSION['con'];
 
                 if(isset($_POST['Connexion']))
                 {
@@ -13,45 +13,56 @@ include '../Models/Bdd.php';
                     $req = "SELECT * FROM utilisateur WHERE Email = '$Email' AND Password ='$Password'";
                     $resultat = mysqli_query($con,$req);
 
-                       if(mysqli_num_rows($resultat) > 0 && !isset($_SESSION['IdUser']))
-                       {
+                    do {
 
-                           while($row = mysqli_fetch_assoc($resultat))
-                           {
-                               $_SESSION['IdUser'] = $row['IdUser'];
-                               $_SESSION['Statut'] = $row['Statut'];
-                           }
+                        if (mysqli_num_rows($resultat) > 0) {
 
-                           switch($_SESSION['Statut'])
-                           {
-
-                               case "Client" : header('location:../Controller/Client.php'); exit();
-
-                               case "Travailleur" : header('location:../Controller/Travailleur.php'); exit();
-
-                               case "Personnel" : header('location:../Controller/Personnel.php'); exit();
-
-                               default : header('location : ../Views/Error.html'); exit();
-
-                           }
-
-                       }
-
-                       else
-                       {
-                           if(isset($_SESSION['IdUser']))
-                           {
-                               echo $message = '<div class="alerte" id="notification">
+                            while ($row = mysqli_fetch_assoc($resultat))
+                            {
+                                if (!isset($_SESSION['IdUser']) || $_SESSION['IdUser'] != $row['IdUser'])
+                                {
+                                    $_SESSION['IdUser'] = $row['IdUser'];
+                                    $_SESSION['Statut'] = $row['Statut'];
+                                }
+                                else
+                                {
+                                    echo $message = '<div class="alerte" id="notification">
                                        <strong>Opération échouée : </strong> Utilisateur déjà connecté<br>
                                        </div>';
-                           }
+                                    break 2;
+                                }
+                            }
 
-                           else
-                           {
-                               echo $message = '<div class="alerte" id="notification">
+                            switch ($_SESSION['Statut'])
+                            {
+
+                                case "Client" :
+                                    header('location:../Controller/Client.php');
+                                    exit();
+
+                                case "Travailleur" :
+                                    header('location:../Controller/Travailleur.php');
+                                    exit();
+
+                                case "Personnel" :
+                                    header('location:../Controller/Personnel.php');
+                                    exit();
+
+                                default :
+                                    header('location : ../Views/Error.html');
+                                    exit();
+
+                            }
+
+                        }
+
+                        else
+                        {
+                            echo $message = '<div class="alerte" id="notification">
                                        <strong>Opération échouée : </strong> Email ou mot de passe incorrect<br>
                                        </div>';
-                           }
-                       }
+                        }
+                    }
+                    while(0);
                 }
                 ?>
